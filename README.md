@@ -24,4 +24,17 @@ ORDER BY column(s) ASC;
 DELETE FROM <table name >
 
 
+1)On DELETE Cascade
+When we create a foreign key using this option, it deletes the referencing rows in the child table
+when the referenced row is deleted in the parent table which has a primary key.
+
+2)On UPDATE cascade 
+When we create a foreign key using UPDATE CASCADE the referencing rows are updated in the child
+table when the referenced row is updated in the parent table which has a primary key.
+
+Example : write this after the Froigen Key Decleration :- 
+ON DELETE CASCADE
+ON UPDATE CASCADE
+
+
 
