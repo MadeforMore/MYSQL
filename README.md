@@ -24,11 +24,11 @@ ORDER BY column(s) ASC;
 DELETE FROM <table name >
 
 
-1)On DELETE Cascade
+1)On DELETE Cascade ( *if we delect someting from table that automaticaly get refleted in the table* )
 When we create a foreign key using this option, it deletes the referencing rows in the child table
 when the referenced row is deleted in the parent table which has a primary key.
 
-2)On UPDATE cascade 
+2)On UPDATE cascade ( *if we Update someting from table that automaticaly get refleted in the table* )
 When we create a foreign key using UPDATE CASCADE the referencing rows are updated in the child
 table when the referenced row is updated in the parent table which has a primary key.
 
