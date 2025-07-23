@@ -16,4 +16,9 @@ HAVING condition
 ORDER BY column(s) ASC;
 
 
+#WHERE and HAVING 
+WHERE is for Rows
+HAVING is for Groups
+
+
 
