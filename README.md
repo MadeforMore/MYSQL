@@ -20,5 +20,8 @@ ORDER BY column(s) ASC;
 1) WHERE is for Rows
 2) HAVING is for Groups
 
+#to delete all data :-
+DELETE FROM <table name >
+
 
 
