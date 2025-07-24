@@ -69,6 +69,8 @@ Join is used to combine rows from two or more tables, based on a related column 
 3) Right join : - (*in this the 2nd name of tabke you writhe then it take the hole data of that table*)
 4) Full join :- Returns all records when there is a match in either left or right table . 
 
+#two more joins : 1)Left Exclusive Join :-  only left data which is not connted with other table 
+2)Right Exclusive Join :- only right table which is not connted to the other table 
 
 
 
