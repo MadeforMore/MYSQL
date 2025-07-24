@@ -59,6 +59,16 @@ DROP age ; ===> to drop the Column
 
 #TRUNCATE TABLE table-name ; ========> the TRUNCATE is delete the table info (*Drop is delete the hole table*)
 
+#Joins in SQL
+Join is used to combine rows from two or more tables, based on a related column between them.
+
+#types : 1) Inner Join ==> when we need the Comman data 
+
+// below 3 are outer joins
+2)Left join
+3) Right join
+4) Full join
+
 
 
 
