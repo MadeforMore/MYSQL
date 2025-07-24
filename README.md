@@ -93,6 +93,12 @@ To use it :
 #UNION ALL :-
 the union all give as the all duplicate values
 
+SQL Sub Queries
+A Subquery or Inner query or a Nested query is a query within another SQL query.
+It involves 2 select statements.
+
+types 1) Select 2) from 3)WHERE (most use)
+
 
 
 
