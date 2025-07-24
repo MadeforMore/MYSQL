@@ -1,121 +1,132 @@
-# MYSQL
-The Practice Queshions for my SQL
 
-General Order
+# 📘 MySQL Practice & Revision Notes — Simplified & Structured
 
+This is your **ultimate cheat sheet** for MySQL. Everything is explained in **simple language** with short examples, organized for **easy revision**, **interview prep**, and **practice**.
+
+---
+
+## 📚 General SQL Query Order
+
+```sql
 SELECT column(s)
-
-FROM table-name
-
+FROM table_name
 WHERE condition
-
 GROUP BY column(s)
-
 HAVING condition
-
 ORDER BY column(s) ASC;
+```
 
+---
 
-#WHERE and HAVING 
-1) WHERE is for Rows
-2) HAVING is for Groups
+## 🔍 WHERE vs HAVING
 
-#to delete all data :-
-DELETE FROM <table name >
+| Clause | Use Case |
+|--------|----------|
+| `WHERE` | Used for filtering **rows** before grouping |
+| `HAVING` | Used for filtering **groups** after `GROUP BY` |
 
+---
 
-1)On DELETE Cascade ( *if we delect someting from table that automaticaly get refleted in the table* )
-When we create a foreign key using this option, it deletes the referencing rows in the child table
-when the referenced row is deleted in the parent table which has a primary key.
+## 🧹 Deleting Data
 
-2)On UPDATE cascade ( *if we Update someting from table that automaticaly get refleted in the table* )
-When we create a foreign key using UPDATE CASCADE the referencing rows are updated in the child
-table when the referenced row is updated in the parent table which has a primary key.
+```sql
+DELETE FROM table_name;  -- Deletes all rows
+TRUNCATE TABLE table_name;  -- Deletes data, keeps structure
+DROP TABLE table_name;  -- Deletes entire table structure
+```
 
-Example : write this after the Froigen Key Decleration :- 
+---
+
+## 🔁 ON DELETE / UPDATE CASCADE
+
+- **ON DELETE CASCADE**: If a row is deleted in the parent table, it automatically deletes related rows in the child table.
+- **ON UPDATE CASCADE**: If a row is updated in the parent table, it auto-updates related rows in the child table.
+
+✅ Add this after a `FOREIGN KEY` in `CREATE TABLE`:
+
+```sql
 ON DELETE CASCADE
 ON UPDATE CASCADE
+```
 
-#Table related Queries
+---
 
-1)ALTER TABLE table-name
-CHANGE COLUMN old_ name new_name new_datatype new_constraint; <== to chage the name of Column 
+## 🧱 Table Altering Queries
 
-2) ALTER TABLE table_name
-MODIFY col-name new_datatype new_constraint;  < == to add the new column to the table 
+| Operation | Query Example |
+|----------|----------------|
+| Rename column | `ALTER TABLE table_name CHANGE old_name new_name DATATYPE;` |
+| Modify column type | `ALTER TABLE table_name MODIFY col_name DATATYPE;` |
+| Rename table | `ALTER TABLE old_name RENAME new_name;` |
+| Add new column | `ALTER TABLE table_name ADD COLUMN age INT DEFAULT 18;` |
+| Drop column | `ALTER TABLE table_name DROP COLUMN age;` |
 
-3) ALTER TABLE student
-RENAME collage_student ; ==> to change the name of table
+---
 
-4) ALTER TABLE student 
-ADD COLUMN age INT NOT NULL DEFAULT 18; == > to add the column in the table
+## 🔗 SQL Joins
 
-5)ALTER TABLE stusdent 
-MODIFY age VARCHAR(3); ==> to modify somthing or to cahnge the data type.
+**Used to combine rows from two or more tables based on a common column.**
 
-6) ALTER TABLE student 
-DROP age ; ===> to drop the Column
+| Type | Description |
+|------|-------------|
+| `INNER JOIN` | Returns only matching rows |
+| `LEFT JOIN` | All from left + matching from right |
+| `RIGHT JOIN` | All from right + matching from left |
+| `FULL JOIN` | All matching rows from both sides |
+| `LEFT EXCLUSIVE JOIN` | Only left-side rows **not** matched |
+| `RIGHT EXCLUSIVE JOIN` | Only right-side rows **not** matched |
 
+🧠 **Self Join** (Table joins with itself):
 
-#TRUNCATE TABLE table-name ; ========> the TRUNCATE is delete the table info (*Drop is delete the hole table*)
+```sql
+SELECT a.name AS manager, b.name AS employee
+FROM employee a
+JOIN employee b ON a.id = b.manager_id;
+```
 
-#Joins in SQL
-Join is used to combine rows from two or more tables, based on a related column between them.
+---
 
-#types : 1) Inner Join ==> when we need the Comman data 
+## 🔄 UNION vs UNION ALL
 
-// below 3 are outer joins
-2)Left join :- Returns all records from the left table, and the matched records from the right table .(*in this the table name you write first then it take the hole data of thata table*)
-3) Right join : - (*in this the 2nd name of tabke you writhe then it take the hole data of that table*)
-4) Full join :- Returns all records when there is a match in either left or right table . 
+- `UNION`: Combines two SELECT queries and removes duplicates.
+- `UNION ALL`: Combines all, **including duplicates**.
 
-#two more joins : 1)Left Exclusive Join :-  only left data which is not connted with other table 
-2)Right Exclusive Join :- only right table which is not connted to the other table 
+Rules:
+- Same number of columns.
+- Same data types.
+- Same column order.
 
+---
 
-#Self Join
-It is a regular join but the table is joined with itself.
-example :- 
-SELECT a.name as manager_name , b.name
-from emoplyee as a
-JOIN emoplyee as b
-ON a.id = b.manager_id;
+## 🧠 SQL Subqueries
 
+Subqueries are SELECT statements inside another query.
 
-#Union
-It is used to combine the result-set of two or more SELECT statements.
-Gives UNIQUE records.(it gives us only unique values betweeen two SELECT Staments )
-To use it :
-• every SELECT should have same no. of columns
-• columns must have similar data types
-• columns in every SELECT should be in same order
+📌 Types:
+1. In `SELECT`
+2. In `FROM` (**alias required**)
+3. In `WHERE` (most common)
 
-#UNION ALL :-
-the union all give as the all duplicate values
+```sql
+SELECT name FROM student WHERE marks > (SELECT AVG(marks) FROM student);
+```
 
-SQL Sub Queries
-A Subquery or Inner query or a Nested query is a query within another SQL query.
-It involves 2 select statements.
+---
 
-types 1) Select 2) from (*you need the Decler the *ALSES* in this for rinnig the CODE*) 3)WHERE (most use)
+## 👁️ MySQL Views
 
+- Views are **virtual tables** based on SELECT queries.
+- They do **not** store data but show real-time data from original tables.
 
-##MySQL Views (*the views are not a real table it is the virtual copy of the real teable and we also can perfrom the oprartion on that views*)
-A view is a virtual table based on the result-set Of an SQL statement.
+```sql
+CREATE VIEW view1 AS
+SELECT rollno, name FROM student;
 
-CREATE VIEW viewl AS
-SELECT rollno,
-name FROM student;
-SELECT * FROM viewl;
+SELECT * FROM view1;
+```
 
-note - view always shows up-to-date data. The
-database engine recreates the view, every time a
-user queries it.
+✅ Use views when you want to simplify complex queries.
 
+---
 
-
-
-
-
-
-
+**⭐ Done reading this? You're ready to write and understand MySQL like a pro!**
