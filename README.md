@@ -36,5 +36,13 @@ Example : write this after the Froigen Key Decleration :-
 ON DELETE CASCADE
 ON UPDATE CASCADE
 
+#Table related Queries
+
+1)ALTER TABLE table-name
+CHANGE COLUMN old_ name new_name new_datatype new_constraint; <== to chage the name of Column 
+
+2) ALTER TABLE table_name
+MODIFY col-name new_datatype new_constraint;  < == to add the new column to the table 
+
 
 
