@@ -90,6 +90,9 @@ To use it :
 • columns must have similar data types
 • columns in every SELECT should be in same order
 
+#UNION ALL :-
+the union all give as the all duplicate values
+
 
 
 
