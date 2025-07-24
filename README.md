@@ -97,7 +97,7 @@ SQL Sub Queries
 A Subquery or Inner query or a Nested query is a query within another SQL query.
 It involves 2 select statements.
 
-types 1) Select 2) from 3)WHERE (most use)
+types 1) Select 2) from (*you need the Decler the *ALSES* in this for rinnig the CODE*) 3)WHERE (most use)
 
 
 
