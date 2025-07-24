@@ -100,6 +100,19 @@ It involves 2 select statements.
 types 1) Select 2) from (*you need the Decler the *ALSES* in this for rinnig the CODE*) 3)WHERE (most use)
 
 
+##MySQL Views
+A view is a virtual table based on the result-set Of an SQL statement.
+
+CREATE VIEW viewl AS
+SELECT rollno,
+name FROM student;
+SELECT * FROM viewl;
+
+note - view always shows up-to-date data. The
+database engine recreates the view, every time a
+user queries it.
+
+
 
 
 
