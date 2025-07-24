@@ -73,5 +73,14 @@ Join is used to combine rows from two or more tables, based on a related column 
 2)Right Exclusive Join :- only right table which is not connted to the other table 
 
 
+#Self Join
+It is a regular join but the table is joined with itself.
+example :- 
+SELECT a.name as manager_name , b.name
+from emoplyee as a
+JOIN emoplyee as b
+ON a.id = b.manager_id;
+
+
 
 
