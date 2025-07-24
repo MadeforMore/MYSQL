@@ -100,7 +100,7 @@ It involves 2 select statements.
 types 1) Select 2) from (*you need the Decler the *ALSES* in this for rinnig the CODE*) 3)WHERE (most use)
 
 
-##MySQL Views
+##MySQL Views (*the views are not a real table it is the virtual copy of the real teable and we also can perfrom the oprartion on that views*)
 A view is a virtual table based on the result-set Of an SQL statement.
 
 CREATE VIEW viewl AS
@@ -111,6 +111,8 @@ SELECT * FROM viewl;
 note - view always shows up-to-date data. The
 database engine recreates the view, every time a
 user queries it.
+
+
 
 
 
