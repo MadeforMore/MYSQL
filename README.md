@@ -82,5 +82,16 @@ JOIN emoplyee as b
 ON a.id = b.manager_id;
 
 
+#Union
+It is used to combine the result-set of two or more SELECT statements.
+Gives UNIQUE records.(it gives us only unique values betweeen two SELECT Staments )
+To use it :
+• every SELECT should have same no. of columns
+• columns must have similar data types
+• columns in every SELECT should be in same order
+
+
+
+
 
 
