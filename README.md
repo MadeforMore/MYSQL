@@ -65,7 +65,8 @@ Join is used to combine rows from two or more tables, based on a related column 
 #types : 1) Inner Join ==> when we need the Comman data 
 
 // below 3 are outer joins
-2)Left join
+2)Left join :- Returns all records from the left table, and the matched records from
+the right table .
 3) Right join
 4) Full join
 
