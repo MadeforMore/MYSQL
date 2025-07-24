@@ -1,0 +1,61 @@
+
+### ✅ **MySQL (DBMS) Cheat Sheet**
+
+| **Command / Topic**                 | **Purpose / Usage**                                              | **Example**                                                                  |
+| ----------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| **CREATE DATABASE**                 | Creates a new database                                           | `CREATE DATABASE college;`                                                   |
+| **USE**                             | Selects a database to work with                                  | `USE college;`                                                               |
+| **CREATE TABLE**                    | Creates a new table                                              | `CREATE TABLE student (id INT, name VARCHAR(50));`                           |
+| **INSERT INTO**                     | Adds data into a table                                           | `INSERT INTO student VALUES (1, 'Aryan');`                                   |
+| **SELECT**                          | Retrieves data from table                                        | `SELECT * FROM student;`                                                     |
+| **WHERE**                           | Filters rows based on condition                                  | `SELECT * FROM student WHERE id = 1;`                                        |
+| **UPDATE**                          | Modifies existing records                                        | `UPDATE student SET name = 'Anil' WHERE id = 1;`                             |
+| **DELETE**                          | Deletes records from table                                       | `DELETE FROM student WHERE id = 1;`                                          |
+| **DROP TABLE**                      | Deletes a table completely                                       | `DROP TABLE student;`                                                        |
+| **ALTER TABLE**                     | Modifies table structure (add/drop/modify column)                | `ALTER TABLE student ADD age INT;`                                           |
+| **ORDER BY**                        | Sorts result set (ASC/DESC)                                      | `SELECT * FROM student ORDER BY name ASC;`                                   |
+| **GROUP BY**                        | Groups rows with the same value                                  | `SELECT dept, COUNT(*) FROM teacher GROUP BY dept;`                          |
+| **HAVING**                          | Applies condition on groups                                      | `SELECT dept, COUNT(*) FROM teacher GROUP BY dept HAVING COUNT(*) > 2;`      |
+| **DISTINCT**                        | Returns unique values                                            | `SELECT DISTINCT city FROM student;`                                         |
+| **LIMIT**                           | Limits number of rows returned                                   | `SELECT * FROM student LIMIT 5;`                                             |
+| **IN**                              | Matches any value in a list                                      | `SELECT * FROM student WHERE city IN ('Pune', 'Mumbai');`                    |
+| **BETWEEN**                         | Checks if value is in range                                      | `SELECT * FROM student WHERE marks BETWEEN 60 AND 80;`                       |
+| **LIKE**                            | Pattern matching using wildcards (`%`, `_`)                      | `SELECT * FROM student WHERE name LIKE 'A%';`                                |
+| **IS NULL / IS NOT NULL**           | Checks for NULL values                                           | `SELECT * FROM student WHERE age IS NULL;`                                   |
+| **CONSTRAINT - PRIMARY KEY**        | Uniquely identifies each row                                     | `id INT PRIMARY KEY`                                                         |
+| **CONSTRAINT - FOREIGN KEY**        | Links two tables                                                 | `FOREIGN KEY(dept_id) REFERENCES dept(id)`                                   |
+| **CONSTRAINT - UNIQUE**             | Ensures all values in column are different                       | `email VARCHAR(100) UNIQUE`                                                  |
+| **CONSTRAINT - NOT NULL**           | Column cannot store NULL values                                  | `name VARCHAR(50) NOT NULL`                                                  |
+| **CONSTRAINT - DEFAULT**            | Sets default value                                               | `status VARCHAR(10) DEFAULT 'active'`                                        |
+| **AND / OR / NOT**                  | Combines conditions                                              | `WHERE city = 'Pune' AND marks > 70`                                         |
+| **INNER JOIN**                      | Returns matching records in both tables                          | `SELECT * FROM A INNER JOIN B ON A.id = B.id;`                               |
+| **LEFT JOIN**                       | Returns all from left + matched from right                       | `SELECT * FROM A LEFT JOIN B ON A.id = B.id;`                                |
+| **RIGHT JOIN**                      | Returns all from right + matched from left                       | `SELECT * FROM A RIGHT JOIN B ON A.id = B.id;`                               |
+| **FULL JOIN (UNION of LEFT+RIGHT)** | Returns all records from both (not directly in MySQL)            | `SELECT * FROM A LEFT JOIN B ON... UNION SELECT * FROM A RIGHT JOIN B ON...` |
+| **UNION / UNION ALL**               | Combines result of two SELECTs (no duplicates / with duplicates) | `SELECT city FROM A UNION SELECT city FROM B;`                               |
+| **SUBQUERY**                        | Query inside another query                                       | `SELECT * FROM student WHERE marks > (SELECT AVG(marks) FROM student);`      |
+| **CASE**                            | Conditional logic in SELECT                                      | `SELECT name, CASE WHEN marks > 75 THEN 'A' ELSE 'B' END FROM student;`      |
+| **IFNULL(expr1, expr2)**            | Returns expr2 if expr1 is NULL                                   | `SELECT IFNULL(age, 0) FROM student;`                                        |
+| **COUNT()**                         | Returns number of rows                                           | `SELECT COUNT(*) FROM student;`                                              |
+| **SUM()**                           | Returns total of values                                          | `SELECT SUM(marks) FROM student;`                                            |
+| **AVG()**                           | Returns average                                                  | `SELECT AVG(marks) FROM student;`                                            |
+| **MIN() / MAX()**                   | Returns smallest/largest value                                   | `SELECT MAX(marks) FROM student;`                                            |
+| **RENAME TABLE**                    | Changes table name                                               | `RENAME TABLE student TO learners;`                                          |
+| **TRUNCATE TABLE**                  | Deletes all rows but keeps table structure                       | `TRUNCATE TABLE student;`                                                    |
+| **SHOW DATABASES**                  | Lists all databases                                              | `SHOW DATABASES;`                                                            |
+| **SHOW TABLES**                     | Lists all tables in the selected database                        | `SHOW TABLES;`                                                               |
+| **DESCRIBE table\_name**            | Shows table structure (columns, types)                           | `DESCRIBE student;`                                                          |
+| **COMMENT**                         | Add single-line or block comments                                | `-- This is a comment`<br>`/* Multi-line comment */`                         |
+
+---
+
+### ✅ **Quick Tips for Placements**
+
+* Always use **`WHERE` clause** with `UPDATE` and `DELETE` to avoid full-table changes.
+* Use **`JOINs`** to solve real-world queries across tables (very important for interviews).
+* Understand **`GROUP BY` + `HAVING`** for aggregation-based questions.
+* Practice **subqueries** and **CASE** for logical condition-based problems.
+* Learn to **write nested SELECTs**, especially inside WHERE clause.
+* Try writing queries from **real-world DB scenarios** (student, employee, orders, etc.).
+
+W
