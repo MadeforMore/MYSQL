@@ -57,6 +57,9 @@ MODIFY age VARCHAR(3); ==> to modify somthing or to cahnge the data type.
 DROP age ; ===> to drop the Column
 
 
+#TRUNCATE TABLE table-name ; ========> the TRUNCATE is delete the table info (*Drop is delete the hole table*)
+
+
 
 
 
