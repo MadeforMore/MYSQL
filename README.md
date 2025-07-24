@@ -65,10 +65,9 @@ Join is used to combine rows from two or more tables, based on a related column 
 #types : 1) Inner Join ==> when we need the Comman data 
 
 // below 3 are outer joins
-2)Left join :- Returns all records from the left table, and the matched records from
-the right table .
-3) Right join
-4) Full join
+2)Left join :- Returns all records from the left table, and the matched records from the right table .(*in this the table name you write first then it take the hole data of thata table*)
+3) Right join : - (*in this the 2nd name of tabke you writhe then it take the hole data of that table*)
+4) Full join :- Returns all records when there is a match in either left or right table . 
 
 
 
