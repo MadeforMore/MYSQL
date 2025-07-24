@@ -44,5 +44,19 @@ CHANGE COLUMN old_ name new_name new_datatype new_constraint; <== to chage the n
 2) ALTER TABLE table_name
 MODIFY col-name new_datatype new_constraint;  < == to add the new column to the table 
 
+3) ALTER TABLE student
+RENAME collage_student ; ==> to change the name of table
+
+4) ALTER TABLE student 
+ADD COLUMN age INT NOT NULL DEFAULT 18; == > to add the column in the table
+
+5)ALTER TABLE stusdent 
+MODIFY age VARCHAR(3); ==> to modify somthing or to cahnge the data type.
+
+6) ALTER TABLE student 
+DROP age ; ===> to drop the Column
+
+
+
 
 
