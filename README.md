@@ -257,6 +257,8 @@ Types of Relationships:
 * One-to-Many: A has many B
 * Many-to-Many: A and B have multiple connections
 ✅ Summary Table for Quick Revision
+
+
 | Topic         | Key Concepts                    | Tip to Remember                 |
 | ------------- | ------------------------------- | ------------------------------- |
 | Keys          | Primary, Foreign, Candidate     | 1 PK only; FK = Connect tables  |
@@ -266,5 +268,7 @@ Types of Relationships:
 | Joins         | Inner, Left, Right, Full        | Left = all from left, and so on |
 | ER Diagrams   | Entity, Attribute, Relationship | Visual map of your database     |
 ---
+
+🔹 **DATE_SUB() is a built-in SQL function used to subtract a specific time (like days, months, etc.) from a date.**
 
 **⭐ Done reading this? You're ready to write and understand MySQL like a pro!**
