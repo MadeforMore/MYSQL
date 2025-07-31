@@ -281,6 +281,19 @@ for aggregate functions? Need
 Ignores NULL except for the count().
 HAVING clause.GROUP BY  impovers the power of the aggration funaction*
 
+
+**Aggregate Functions**
+l.COUNT()
+2.SUM()
+3.AVG ( )
+4.MIN()
+5.MAX()
+
+
+
+
+
+
 THE **DISTINCT keyword** :-  *to find the unique values*
 FROM Student;
 SELECT COUNT(DISTINCT Age)
