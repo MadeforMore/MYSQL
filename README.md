@@ -272,3 +272,11 @@ Types of Relationships:
 🔹 **DATE_SUB() is a built-in SQL function used to subtract a specific time (like days, months, etc.) from a date.**
 
 **⭐ Done reading this? You're ready to write and understand MySQL like a pro!**
+
+
+**Aggregate Functions**
+*Perform calculations on multiple values.
+single value.Returns a
+for aggregate functions? Need
+Ignores NULL except for the count().
+HAVING clause.GROUP BY  impovers the power of the aggration funaction*
