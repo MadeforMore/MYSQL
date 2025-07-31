@@ -280,3 +280,7 @@ single value.Returns a
 for aggregate functions? Need
 Ignores NULL except for the count().
 HAVING clause.GROUP BY  impovers the power of the aggration funaction*
+
+THE **DISTINCT keyword** :-  *to find the unique values*
+FROM Student;
+SELECT COUNT(DISTINCT Age)
