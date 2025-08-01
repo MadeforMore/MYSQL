@@ -135,7 +135,8 @@ SELECT * FROM view1;
 Here are detailed and easy-to-remember notes on each important SQL/DBMS topic. These are explained in simple English, step-by-step, with examples so you never forget them during interviews or exams.
 ---
 📘 1. Keys – Primary, Foreign, Candidate
-🔑 Primary Key
+
+**🔑 Primary Key**
 * Uniquely identifies each record in a table.
 * Cannot have `NULL` values.
 * Only one primary key per table.
