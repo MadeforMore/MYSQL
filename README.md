@@ -292,9 +292,17 @@ l.COUNT()
 
 
 
-
-
-
 THE **DISTINCT keyword** :-  *to find the unique values*
 FROM Student;
 SELECT COUNT(DISTINCT Age)
+
+**🧩 Step 2: 🧱 Break It Down**
+Ask yourself:
+Do I need to combine two tables? → Use JOIN
+Do I need to group data? → Use GROUP BY
+Do I need to filter rows? → Use WHERE
+Do I need to filter groups? → Use HAVING
+Do I need to rank or sort? → Use ORDER BY, ROW_NUMBER, LIMIT
+
+
+
